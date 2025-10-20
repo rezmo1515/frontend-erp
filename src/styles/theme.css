@@ -1,0 +1,82 @@
+:root {
+  --color-primary: #d7263d;
+  --color-primary-dark: #a81c2e;
+  --color-primary-light: #f6d5da;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f7f7f8;
+  --color-border: #e4e4e7;
+  --color-text: #1f2933;
+  --color-muted: #6b7280;
+  --color-danger: #b91c1c;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 15px 35px rgba(199, 43, 66, 0.18);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--color-surface-alt);
+  color: var(--color-text);
+  margin: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--danger {
+  background: rgba(185, 28, 28, 0.12);
+  color: var(--color-danger);
+  border-color: rgba(185, 28, 28, 0.3);
+}
+
+.btn--danger:hover {
+  background: rgba(185, 28, 28, 0.18);
+}
+
+.text-error {
+  color: var(--color-danger);
+  font-weight: 600;
+}
